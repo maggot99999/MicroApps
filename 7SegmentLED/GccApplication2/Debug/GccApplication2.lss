@@ -1,0 +1,648 @@
+
+GccApplication2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000002ee  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000029a  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000002ee  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000320  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000050  00000000  00000000  00000360  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000309  00000000  00000000  000003b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001df  00000000  00000000  000006b9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000001f4  00000000  00000000  00000898  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000c8  00000000  00000000  00000a8c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000273  00000000  00000000  00000b54  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000031c  00000000  00000000  00000dc7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000058  00000000  00000000  000010e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3d 00 	jmp	0x7a	; 0x7a <__ctors_end>
+   4:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+   8:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+   c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  10:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  14:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  18:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  1c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  20:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  24:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  28:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  2c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  30:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  34:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  38:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  3c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  40:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  44:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  48:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  4c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  50:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  54:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  58:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  5c:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  60:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  64:	0c 94 52 00 	jmp	0xa4	; 0xa4 <__bad_interrupt>
+  68:	8d 00       	.word	0x008d	; ????
+  6a:	93 00       	.word	0x0093	; ????
+  6c:	9e 00       	.word	0x009e	; ????
+  6e:	a9 00       	.word	0x00a9	; ????
+  70:	b3 00       	.word	0x00b3	; ????
+  72:	be 00       	.word	0x00be	; ????
+  74:	cb 00       	.word	0x00cb	; ????
+  76:	d2 00       	.word	0x00d2	; ????
+  78:	e1 00       	.word	0x00e1	; ????
+
+0000007a <__ctors_end>:
+  7a:	11 24       	eor	r1, r1
+  7c:	1f be       	out	0x3f, r1	; 63
+  7e:	cf ef       	ldi	r28, 0xFF	; 255
+  80:	d8 e0       	ldi	r29, 0x08	; 8
+  82:	de bf       	out	0x3e, r29	; 62
+  84:	cd bf       	out	0x3d, r28	; 61
+
+00000086 <__do_copy_data>:
+  86:	11 e0       	ldi	r17, 0x01	; 1
+  88:	a0 e0       	ldi	r26, 0x00	; 0
+  8a:	b1 e0       	ldi	r27, 0x01	; 1
+  8c:	ea e9       	ldi	r30, 0x9A	; 154
+  8e:	f2 e0       	ldi	r31, 0x02	; 2
+  90:	02 c0       	rjmp	.+4      	; 0x96 <__do_copy_data+0x10>
+  92:	05 90       	lpm	r0, Z+
+  94:	0d 92       	st	X+, r0
+  96:	a0 30       	cpi	r26, 0x00	; 0
+  98:	b1 07       	cpc	r27, r17
+  9a:	d9 f7       	brne	.-10     	; 0x92 <__do_copy_data+0xc>
+  9c:	0e 94 2d 01 	call	0x25a	; 0x25a <main>
+  a0:	0c 94 4b 01 	jmp	0x296	; 0x296 <_exit>
+
+000000a4 <__bad_interrupt>:
+  a4:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a8 <_Z10clearPORTDv>:
+
+
+
+// Functions
+void clearPORTD() {
+	PORTD &= ~LED_DDRD;  //Clears screen for Port B
+  a8:	8b b1       	in	r24, 0x0b	; 11
+  aa:	87 70       	andi	r24, 0x07	; 7
+  ac:	8b b9       	out	0x0b, r24	; 11
+  ae:	08 95       	ret
+
+000000b0 <_Z10clearPORTBv>:
+}
+
+void clearPORTB() {
+	PORTB &= ~LED_DDRB;  //Clears screen for Port D
+  b0:	85 b1       	in	r24, 0x05	; 5
+  b2:	88 7f       	andi	r24, 0xF8	; 248
+  b4:	85 b9       	out	0x05, r24	; 5
+  b6:	08 95       	ret
+
+000000b8 <_Z8clearLEDv>:
+}
+
+//Clears SCREEN
+void clearLED() {
+	CLR_PORTD();
+  b8:	0e 94 54 00 	call	0xa8	; 0xa8 <_Z10clearPORTDv>
+	CLR_PORTB();
+  bc:	0e 94 58 00 	call	0xb0	; 0xb0 <_Z10clearPORTBv>
+  c0:	08 95       	ret
+
+000000c2 <_Z11checkButtonPh>:
+}
+
+//Waits for the pressing a button and changes digit
+void checkButton(uint8_t* n) {
+  c2:	fc 01       	movw	r30, r24
+	while(1) {
+		if((PIND & (1<<BTN_PIN))) {
+  c4:	4a 9b       	sbis	0x09, 2	; 9
+  c6:	fe cf       	rjmp	.-4      	; 0xc4 <_Z11checkButtonPh+0x2>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  c8:	8f e3       	ldi	r24, 0x3F	; 63
+  ca:	9c e9       	ldi	r25, 0x9C	; 156
+  cc:	01 97       	sbiw	r24, 0x01	; 1
+  ce:	f1 f7       	brne	.-4      	; 0xcc <_Z11checkButtonPh+0xa>
+  d0:	00 c0       	rjmp	.+0      	; 0xd2 <_Z11checkButtonPh+0x10>
+  d2:	00 00       	nop
+  			_delay_ms(10);
+  			if(!(PIND & (1<<BTN_PIN))) {
+  d4:	4a 99       	sbic	0x09, 2	; 9
+  d6:	f6 cf       	rjmp	.-20     	; 0xc4 <_Z11checkButtonPh+0x2>
+    			PORTB ^= (1<<LED_PIN);
+  d8:	85 b1       	in	r24, 0x05	; 5
+  da:	90 e2       	ldi	r25, 0x20	; 32
+  dc:	98 27       	eor	r25, r24
+  de:	95 b9       	out	0x05, r25	; 5
+    			(*n)++;
+  e0:	90 81       	ld	r25, Z
+  e2:	9f 5f       	subi	r25, 0xFF	; 255
+  e4:	90 83       	st	Z, r25
+  e6:	08 95       	ret
+
+000000e8 <_Z6setLEDPh>:
+			PORTD |= (1<<a[i]);
+	}
+}
+
+//Sets LEDs to display digits
+void setLED(uint8_t *n) {
+  e8:	1f 93       	push	r17
+  ea:	cf 93       	push	r28
+  ec:	df 93       	push	r29
+  ee:	cd b7       	in	r28, 0x3d	; 61
+  f0:	de b7       	in	r29, 0x3e	; 62
+  f2:	28 97       	sbiw	r28, 0x08	; 8
+  f4:	0f b6       	in	r0, 0x3f	; 63
+  f6:	f8 94       	cli
+  f8:	de bf       	out	0x3e, r29	; 62
+  fa:	0f be       	out	0x3f, r0	; 63
+  fc:	cd bf       	out	0x3d, r28	; 61
+	uint8_t aSize = 0x08;
+	uint8_t a[aSize];
+	switch(*n) {
+  fe:	dc 01       	movw	r26, r24
+ 100:	ec 91       	ld	r30, X
+ 102:	4e 2f       	mov	r20, r30
+ 104:	50 e0       	ldi	r21, 0x00	; 0
+ 106:	fa 01       	movw	r30, r20
+ 108:	31 97       	sbiw	r30, 0x01	; 1
+ 10a:	e9 30       	cpi	r30, 0x09	; 9
+ 10c:	f1 05       	cpc	r31, r1
+ 10e:	08 f0       	brcs	.+2      	; 0x112 <_Z6setLEDPh+0x2a>
+ 110:	65 c0       	rjmp	.+202    	; 0x1dc <_Z6setLEDPh+0xf4>
+ 112:	ec 5c       	subi	r30, 0xCC	; 204
+ 114:	ff 4f       	sbci	r31, 0xFF	; 255
+ 116:	0c 94 45 01 	jmp	0x28a	; 0x28a <__tablejump2__>
+    
+		case 1: /*BC*/
+			aSize = 2;
+			a[0] = LED_b;
+ 11a:	87 e0       	ldi	r24, 0x07	; 7
+ 11c:	89 83       	std	Y+1, r24	; 0x01
+			a[1] = LED_c;
+ 11e:	84 e0       	ldi	r24, 0x04	; 4
+ 120:	8a 83       	std	Y+2, r24	; 0x02
+	uint8_t aSize = 0x08;
+	uint8_t a[aSize];
+	switch(*n) {
+    
+		case 1: /*BC*/
+			aSize = 2;
+ 122:	12 e0       	ldi	r17, 0x02	; 2
+			a[0] = LED_b;
+			a[1] = LED_c;
+			break;
+ 124:	87 c0       	rjmp	.+270    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 2: /*ABGED*/
+			aSize = 5;
+			a[0] = LED_a;
+ 126:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_b;
+ 128:	87 e0       	ldi	r24, 0x07	; 7
+ 12a:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_g;
+ 12c:	82 e0       	ldi	r24, 0x02	; 2
+ 12e:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_e;
+ 130:	86 e0       	ldi	r24, 0x06	; 6
+ 132:	8c 83       	std	Y+4, r24	; 0x04
+			a[4] = LED_d;
+ 134:	85 e0       	ldi	r24, 0x05	; 5
+ 136:	8d 83       	std	Y+5, r24	; 0x05
+			a[0] = LED_b;
+			a[1] = LED_c;
+			break;
+		
+		case 2: /*ABGED*/
+			aSize = 5;
+ 138:	15 e0       	ldi	r17, 0x05	; 5
+			a[0] = LED_a;
+			a[1] = LED_b;
+			a[2] = LED_g;
+			a[3] = LED_e;
+			a[4] = LED_d;
+			break;
+ 13a:	7c c0       	rjmp	.+248    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 3: /*ABGCD*/
+			aSize = 5;
+			a[0] = LED_a;
+ 13c:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_b;
+ 13e:	87 e0       	ldi	r24, 0x07	; 7
+ 140:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_g;
+ 142:	82 e0       	ldi	r24, 0x02	; 2
+ 144:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_c;
+ 146:	84 e0       	ldi	r24, 0x04	; 4
+ 148:	8c 83       	std	Y+4, r24	; 0x04
+			a[4] = LED_d;
+ 14a:	85 e0       	ldi	r24, 0x05	; 5
+ 14c:	8d 83       	std	Y+5, r24	; 0x05
+			a[3] = LED_e;
+			a[4] = LED_d;
+			break;
+		
+		case 3: /*ABGCD*/
+			aSize = 5;
+ 14e:	15 e0       	ldi	r17, 0x05	; 5
+			a[0] = LED_a;
+			a[1] = LED_b;
+			a[2] = LED_g;
+			a[3] = LED_c;
+			a[4] = LED_d;
+			break;
+ 150:	71 c0       	rjmp	.+226    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 4: /*FGBC*/
+			aSize = 4;
+			a[0] = LED_f;
+ 152:	81 e0       	ldi	r24, 0x01	; 1
+ 154:	89 83       	std	Y+1, r24	; 0x01
+			a[1] = LED_g;
+ 156:	82 e0       	ldi	r24, 0x02	; 2
+ 158:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_b;
+ 15a:	87 e0       	ldi	r24, 0x07	; 7
+ 15c:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_c;
+ 15e:	84 e0       	ldi	r24, 0x04	; 4
+ 160:	8c 83       	std	Y+4, r24	; 0x04
+			a[3] = LED_c;
+			a[4] = LED_d;
+			break;
+		
+		case 4: /*FGBC*/
+			aSize = 4;
+ 162:	14 e0       	ldi	r17, 0x04	; 4
+			a[0] = LED_f;
+			a[1] = LED_g;
+			a[2] = LED_b;
+			a[3] = LED_c;
+			break;
+ 164:	67 c0       	rjmp	.+206    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 5: /*AFGCD*/
+			aSize = 5;
+			a[0] = LED_a;
+ 166:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_f;
+ 168:	81 e0       	ldi	r24, 0x01	; 1
+ 16a:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_g;
+ 16c:	82 e0       	ldi	r24, 0x02	; 2
+ 16e:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_c;
+ 170:	84 e0       	ldi	r24, 0x04	; 4
+ 172:	8c 83       	std	Y+4, r24	; 0x04
+			a[4] = LED_d;
+ 174:	85 e0       	ldi	r24, 0x05	; 5
+ 176:	8d 83       	std	Y+5, r24	; 0x05
+			a[2] = LED_b;
+			a[3] = LED_c;
+			break;
+		
+		case 5: /*AFGCD*/
+			aSize = 5;
+ 178:	15 e0       	ldi	r17, 0x05	; 5
+			a[0] = LED_a;
+			a[1] = LED_f;
+			a[2] = LED_g;
+			a[3] = LED_c;
+			a[4] = LED_d;
+			break;
+ 17a:	5c c0       	rjmp	.+184    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 6: /*AFGCED*/
+			aSize = 6;
+			a[0] = LED_a;
+ 17c:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_f;
+ 17e:	81 e0       	ldi	r24, 0x01	; 1
+ 180:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_g;
+ 182:	82 e0       	ldi	r24, 0x02	; 2
+ 184:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_c;
+ 186:	84 e0       	ldi	r24, 0x04	; 4
+ 188:	8c 83       	std	Y+4, r24	; 0x04
+			a[4] = LED_e;
+ 18a:	86 e0       	ldi	r24, 0x06	; 6
+ 18c:	8d 83       	std	Y+5, r24	; 0x05
+			a[5] = LED_d;
+ 18e:	85 e0       	ldi	r24, 0x05	; 5
+ 190:	8e 83       	std	Y+6, r24	; 0x06
+			a[3] = LED_c;
+			a[4] = LED_d;
+			break;
+		
+		case 6: /*AFGCED*/
+			aSize = 6;
+ 192:	16 e0       	ldi	r17, 0x06	; 6
+			a[1] = LED_f;
+			a[2] = LED_g;
+			a[3] = LED_c;
+			a[4] = LED_e;
+			a[5] = LED_d;
+			break;
+ 194:	4f c0       	rjmp	.+158    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 7: /*ABC*/
+			aSize = 3;
+			a[0] = LED_a;
+ 196:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_b;
+ 198:	87 e0       	ldi	r24, 0x07	; 7
+ 19a:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_c;	
+ 19c:	84 e0       	ldi	r24, 0x04	; 4
+ 19e:	8b 83       	std	Y+3, r24	; 0x03
+			a[4] = LED_e;
+			a[5] = LED_d;
+			break;
+		
+		case 7: /*ABC*/
+			aSize = 3;
+ 1a0:	13 e0       	ldi	r17, 0x03	; 3
+			a[0] = LED_a;
+			a[1] = LED_b;
+			a[2] = LED_c;	
+			break;
+ 1a2:	48 c0       	rjmp	.+144    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 8: /*ABCDEFG*/
+			aSize = 7;
+			a[0] = LED_a;
+ 1a4:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_b;
+ 1a6:	87 e0       	ldi	r24, 0x07	; 7
+ 1a8:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_c;
+ 1aa:	84 e0       	ldi	r24, 0x04	; 4
+ 1ac:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_d;
+ 1ae:	85 e0       	ldi	r24, 0x05	; 5
+ 1b0:	8c 83       	std	Y+4, r24	; 0x04
+			a[4] = LED_e;
+ 1b2:	86 e0       	ldi	r24, 0x06	; 6
+ 1b4:	8d 83       	std	Y+5, r24	; 0x05
+			a[5] = LED_f;
+ 1b6:	81 e0       	ldi	r24, 0x01	; 1
+ 1b8:	8e 83       	std	Y+6, r24	; 0x06
+			a[6] = LED_g;
+ 1ba:	82 e0       	ldi	r24, 0x02	; 2
+ 1bc:	8f 83       	std	Y+7, r24	; 0x07
+			a[1] = LED_b;
+			a[2] = LED_c;	
+			break;
+		
+		case 8: /*ABCDEFG*/
+			aSize = 7;
+ 1be:	17 e0       	ldi	r17, 0x07	; 7
+			a[2] = LED_c;
+			a[3] = LED_d;
+			a[4] = LED_e;
+			a[5] = LED_f;
+			a[6] = LED_g;
+			break;
+ 1c0:	39 c0       	rjmp	.+114    	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		case 9: /*ABCDFG*/
+			aSize = 6;
+			a[0] = LED_a;
+ 1c2:	19 82       	std	Y+1, r1	; 0x01
+			a[1] = LED_b;
+ 1c4:	87 e0       	ldi	r24, 0x07	; 7
+ 1c6:	8a 83       	std	Y+2, r24	; 0x02
+			a[2] = LED_c;
+ 1c8:	84 e0       	ldi	r24, 0x04	; 4
+ 1ca:	8b 83       	std	Y+3, r24	; 0x03
+			a[3] = LED_d;
+ 1cc:	85 e0       	ldi	r24, 0x05	; 5
+ 1ce:	8c 83       	std	Y+4, r24	; 0x04
+			a[4] = LED_f;
+ 1d0:	81 e0       	ldi	r24, 0x01	; 1
+ 1d2:	8d 83       	std	Y+5, r24	; 0x05
+			a[5] = LED_g;
+ 1d4:	82 e0       	ldi	r24, 0x02	; 2
+ 1d6:	8e 83       	std	Y+6, r24	; 0x06
+			a[5] = LED_f;
+			a[6] = LED_g;
+			break;
+		
+		case 9: /*ABCDFG*/
+			aSize = 6;
+ 1d8:	16 e0       	ldi	r17, 0x06	; 6
+			a[1] = LED_b;
+			a[2] = LED_c;
+			a[3] = LED_d;
+			a[4] = LED_f;
+			a[5] = LED_g;
+			break;
+ 1da:	2c c0       	rjmp	.+88     	; 0x234 <_Z6setLEDPh+0x14c>
+		
+		default: /*ABCDEF*/
+    		aSize = 6;
+    		a[0] = LED_b;
+ 1dc:	27 e0       	ldi	r18, 0x07	; 7
+ 1de:	29 83       	std	Y+1, r18	; 0x01
+    		a[1] = LED_c;
+ 1e0:	24 e0       	ldi	r18, 0x04	; 4
+ 1e2:	2a 83       	std	Y+2, r18	; 0x02
+    		a[2] = LED_d;
+ 1e4:	25 e0       	ldi	r18, 0x05	; 5
+ 1e6:	2b 83       	std	Y+3, r18	; 0x03
+    		a[3] = LED_e;
+ 1e8:	26 e0       	ldi	r18, 0x06	; 6
+ 1ea:	2c 83       	std	Y+4, r18	; 0x04
+    		a[4] = LED_a;
+ 1ec:	1d 82       	std	Y+5, r1	; 0x05
+    		a[5] = LED_f;
+ 1ee:	21 e0       	ldi	r18, 0x01	; 1
+ 1f0:	2e 83       	std	Y+6, r18	; 0x06
+        
+			(*n) = 0;
+ 1f2:	fc 01       	movw	r30, r24
+ 1f4:	10 82       	st	Z, r1
+			a[4] = LED_f;
+			a[5] = LED_g;
+			break;
+		
+		default: /*ABCDEF*/
+    		aSize = 6;
+ 1f6:	16 e0       	ldi	r17, 0x06	; 6
+    		a[3] = LED_e;
+    		a[4] = LED_a;
+    		a[5] = LED_f;
+        
+			(*n) = 0;
+			break;
+ 1f8:	1d c0       	rjmp	.+58     	; 0x234 <_Z6setLEDPh+0x14c>
+	}
+	
+	CLR_LED(); 
+  
+	for (uint8_t i = 0; i < aSize; i++) {
+		if(a[i] == LED_a || a[i] == LED_f || a[i] == LED_g)
+ 1fa:	81 91       	ld	r24, Z+
+ 1fc:	83 30       	cpi	r24, 0x03	; 3
+ 1fe:	58 f4       	brcc	.+22     	; 0x216 <_Z6setLEDPh+0x12e>
+			PORTB |= (1<<a[i]);
+ 200:	65 b1       	in	r22, 0x05	; 5
+ 202:	da 01       	movw	r26, r20
+ 204:	02 c0       	rjmp	.+4      	; 0x20a <_Z6setLEDPh+0x122>
+ 206:	aa 0f       	add	r26, r26
+ 208:	bb 1f       	adc	r27, r27
+ 20a:	8a 95       	dec	r24
+ 20c:	e2 f7       	brpl	.-8      	; 0x206 <_Z6setLEDPh+0x11e>
+ 20e:	cd 01       	movw	r24, r26
+ 210:	86 2b       	or	r24, r22
+ 212:	85 b9       	out	0x05, r24	; 5
+ 214:	0a c0       	rjmp	.+20     	; 0x22a <_Z6setLEDPh+0x142>
+		else
+			PORTD |= (1<<a[i]);
+ 216:	6b b1       	in	r22, 0x0b	; 11
+ 218:	da 01       	movw	r26, r20
+ 21a:	02 c0       	rjmp	.+4      	; 0x220 <_Z6setLEDPh+0x138>
+ 21c:	aa 0f       	add	r26, r26
+ 21e:	bb 1f       	adc	r27, r27
+ 220:	8a 95       	dec	r24
+ 222:	e2 f7       	brpl	.-8      	; 0x21c <_Z6setLEDPh+0x134>
+ 224:	cd 01       	movw	r24, r26
+ 226:	86 2b       	or	r24, r22
+ 228:	8b b9       	out	0x0b, r24	; 11
+ 22a:	8e 2f       	mov	r24, r30
+ 22c:	82 1b       	sub	r24, r18
+			break;
+	}
+	
+	CLR_LED(); 
+  
+	for (uint8_t i = 0; i < aSize; i++) {
+ 22e:	81 17       	cp	r24, r17
+ 230:	20 f3       	brcs	.-56     	; 0x1fa <_Z6setLEDPh+0x112>
+ 232:	09 c0       	rjmp	.+18     	; 0x246 <_Z6setLEDPh+0x15e>
+        
+			(*n) = 0;
+			break;
+	}
+	
+	CLR_LED(); 
+ 234:	0e 94 5c 00 	call	0xb8	; 0xb8 <_Z8clearLEDv>
+ 238:	9e 01       	movw	r18, r28
+ 23a:	2f 5f       	subi	r18, 0xFF	; 255
+ 23c:	3f 4f       	sbci	r19, 0xFF	; 255
+ 23e:	f9 01       	movw	r30, r18
+  
+	for (uint8_t i = 0; i < aSize; i++) {
+		if(a[i] == LED_a || a[i] == LED_f || a[i] == LED_g)
+			PORTB |= (1<<a[i]);
+		else
+			PORTD |= (1<<a[i]);
+ 240:	41 e0       	ldi	r20, 0x01	; 1
+ 242:	50 e0       	ldi	r21, 0x00	; 0
+ 244:	da cf       	rjmp	.-76     	; 0x1fa <_Z6setLEDPh+0x112>
+	}
+}
+ 246:	28 96       	adiw	r28, 0x08	; 8
+ 248:	0f b6       	in	r0, 0x3f	; 63
+ 24a:	f8 94       	cli
+ 24c:	de bf       	out	0x3e, r29	; 62
+ 24e:	0f be       	out	0x3f, r0	; 63
+ 250:	cd bf       	out	0x3d, r28	; 61
+ 252:	df 91       	pop	r29
+ 254:	cf 91       	pop	r28
+ 256:	1f 91       	pop	r17
+ 258:	08 95       	ret
+
+0000025a <main>:
+void setLED(uint8_t*);
+
+
+//Main thread
+int main(void)
+{
+ 25a:	cf 93       	push	r28
+ 25c:	df 93       	push	r29
+ 25e:	1f 92       	push	r1
+ 260:	cd b7       	in	r28, 0x3d	; 61
+ 262:	de b7       	in	r29, 0x3e	; 62
+  //----SETUP STAGE
+  
+  //Setups I/O PINS
+	DDRD &= ~(1<<BTN_PIN);
+ 264:	52 98       	cbi	0x0a, 2	; 10
+	DDRB |=	 (1<<LED_PIN);
+ 266:	25 9a       	sbi	0x04, 5	; 4
+	DDRD |= LED_DDRD;
+ 268:	8a b1       	in	r24, 0x0a	; 10
+ 26a:	88 6f       	ori	r24, 0xF8	; 248
+ 26c:	8a b9       	out	0x0a, r24	; 10
+	DDRB |= LED_DDRB;
+ 26e:	84 b1       	in	r24, 0x04	; 4
+ 270:	87 60       	ori	r24, 0x07	; 7
+ 272:	84 b9       	out	0x04, r24	; 4
+  
+  //Activates pull-up resistors
+	PORTD |= (1<<BTN_PIN);	
+ 274:	5a 9a       	sbi	0x0b, 2	; 11
+  
+  //Initializes counter for digits from 0 to 9
+	uint8_t currentDigit = 0x00;	
+ 276:	19 82       	std	Y+1, r1	; 0x01
+	{ 
+	   //A test for the pin position
+		//TEST_LED(); 
+    
+       //Sets LEDs to display digits
+		SET_LED(currentDigit);
+ 278:	ce 01       	movw	r24, r28
+ 27a:	01 96       	adiw	r24, 0x01	; 1
+ 27c:	0e 94 74 00 	call	0xe8	; 0xe8 <_Z6setLEDPh>
+	   //Waits for the pressing a button and changes digit
+		CHK_BTN(currentDigit);
+ 280:	ce 01       	movw	r24, r28
+ 282:	01 96       	adiw	r24, 0x01	; 1
+ 284:	0e 94 61 00 	call	0xc2	; 0xc2 <_Z11checkButtonPh>
+	}
+ 288:	f7 cf       	rjmp	.-18     	; 0x278 <main+0x1e>
+
+0000028a <__tablejump2__>:
+ 28a:	ee 0f       	add	r30, r30
+ 28c:	ff 1f       	adc	r31, r31
+ 28e:	05 90       	lpm	r0, Z+
+ 290:	f4 91       	lpm	r31, Z
+ 292:	e0 2d       	mov	r30, r0
+ 294:	09 94       	ijmp
+
+00000296 <_exit>:
+ 296:	f8 94       	cli
+
+00000298 <__stop_program>:
+ 298:	ff cf       	rjmp	.-2      	; 0x298 <__stop_program>
